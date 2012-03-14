@@ -35,6 +35,27 @@ app.configure 'development', () ->
 app.configure 'production', () ->
 	app.use express.errorHandler()
 
+# IO
+
+users = {}
+io = require('socket.io').listen app
+io.set 'log level', 1
+
+io.sockets.on 'connection', (socket) ->
+	socket.on 'adduser', (user) ->
+		if users[user]==user
+			socket.emit 'sign', { state: 0 }
+		else
+			socket.user = user
+			users[user] = user
+			socket.emit 'sign', { state: 1 }
+			io.sockets.emit 'update', users
+
+	socket.on 'disconnect', () ->
+		delete users[socket.user]
+		io.sockets.emit 'update', users
+
+
 # Routes
 
 app.get '/', routes.index
