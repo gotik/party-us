@@ -1,5 +1,10 @@
 (function() {
-  var flag, node, socket;
+  var errors, flag, node, socket;
+
+  errors = {
+    NICK_TAKEN: 'Nick taken :(',
+    EMPTY: '¬¬"'
+  };
 
   flag = false;
 
@@ -14,7 +19,7 @@
   socket.on('sign', function(data) {
     if (data.state === 0) {
       $('#user').addClass('rounded_error');
-      node.err($('.box_login'), node.errors.EMPTY);
+      node.err($('.box_login'), errors.NICK_TAKEN);
     } else {
       $('#alert').hide('slow');
       flag = true;
@@ -34,25 +39,18 @@
     }
   });
 
-  socket.on('handle', function(data) {
-    return $('#' + data.obj[0]).css({
-      'left': data.obj[1] + 'px',
-      'top': data.obj[2] + 'px'
-    });
-  });
-
   node = {
-    errors: {
-      NICK_TAKEN: 'Nick taken :(',
-      EMPTY: '¬¬"'
-    },
     init: function() {
       return $('#buttom').on('click', function(event) {
         event.preventDefault();
         $('#loading').show();
         if ($('#user').val().trim() === '') {
           $('#user').addClass('rounded_error');
-          node.err($('.box_login'), node.errors.EMPTY);
+          node.err($('.box_login'), errors.EMPTY);
+          return $('#loading').hide();
+        } else if ($('#password').val().trim() === '') {
+          $('#password').addClass('rounded_error');
+          node.err($('.box_login'), errors.EMPTY);
           return $('#loading').hide();
         } else {
           $('#alert').hide('slow');

@@ -6,10 +6,11 @@ div(role='main')
 		article#alert.box_login
 		aritcle.box_login.drag
 			form#form(method='post')
-				p Pick some nick
 				p
 					input.rounded#user(value=user, required)
 				p
+					input.rounded#password(value=user, type='password', required)
+				p
 					#loading
-					input.rounded#buttom(type="submit", value="continue")
+					input.rounded#buttom(type='submit', value='login')
 footer

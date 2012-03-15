@@ -1,3 +1,9 @@
+# Define errors here
+errors = {
+	NICK_TAKEN : 'Nick taken :('
+	EMPTY : '¬¬"'
+}
+
 flag = false
 node = {}
 socket = io.connect '', {
@@ -12,7 +18,7 @@ socket = io.connect '', {
 socket.on 'sign', (data) ->
 	if data.state==0 
 		$('#user').addClass 'rounded_error'
-		node.err $('.box_login'), node.errors.EMPTY
+		node.err $('.box_login'), errors.NICK_TAKEN
 	else
 		$('#alert').hide 'slow'
 		flag=true
@@ -29,12 +35,6 @@ socket.on 'update', (data) ->
 
 # Namespace
 node = {
-	# Static values
-	errors: {
-		NICK_TAKEN : 'Nick taken :('
-		EMPTY : '¬¬"'
-	}
-
 	# Initialize function
 	init: () ->
 		# Login button action
@@ -44,7 +44,11 @@ node = {
 			# If the nick you entered is empty fire error
 			if $('#user').val().trim() == ''
 				$('#user').addClass 'rounded_error'
-				node.err $('.box_login'), node.errors.EMPTY
+				node.err $('.box_login'), errors.EMPTY
+				$('#loading').hide()
+			else if $('#password').val().trim() == ''
+				$('#password').addClass 'rounded_error'
+				node.err $('.box_login'), errors.EMPTY
 				$('#loading').hide()
 			else
 				$('#alert').hide 'slow'
