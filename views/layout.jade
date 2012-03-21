@@ -19,8 +19,7 @@ html(class='no-js', lang='en')
 		
 		link(rel='stylesheet', href='css/style.css')
 		
-		script(src='/js/libs/modernizr-2.5.3.min.js')
-		script(src='/socket.io/socket.io.js')
+		script(src='js/libs/modernizr-2.5.3.min.js')
 
 	body
 		//if lt IE 7
@@ -28,13 +27,14 @@ html(class='no-js', lang='en')
 		!=body
 
 		script(src='//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
-		script window.jQuery || document.write('<script src="/js/libs/jquery-1.7.1.min.js"><\\/script>')
+		script window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\\/script>')
+		script(src='/socket.io/socket.io.js')
 
-		script(src='/js/plugins.js')
-		script(src='/js/script.js')
+		script(src='js/plugins.js')
+		script(src='js/script.js')
 
 		script
-			var _gaq=[['_setAccount','UA-30048458-1'],['_trackPageview']];
+			var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
 			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
 			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
 			s.parentNode.insertBefore(g,s)}(document,'script'));
