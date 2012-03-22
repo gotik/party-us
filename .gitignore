@@ -1,5 +1,7 @@
-local_settings.py
-*.css
+*.log
+*.pot
 *.pyc
+local_settings.py
+
+*.css
 media/
-*.project
