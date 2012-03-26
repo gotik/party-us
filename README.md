@@ -3,4 +3,4 @@
 nothing yet
 
 # Some Dependencies
-http://django-mongodb.org/topics/setup.html
+mongodb
