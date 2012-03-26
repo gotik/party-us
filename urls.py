@@ -3,9 +3,9 @@ from django.contrib import admin
 
 admin.autodiscover()
 
-urlpatterns = patterns('',
+urlpatterns = patterns('party_us.back',
 
-    url(r'^$', include('party_us.back.home.urls')),
+    url(r'^$', include('home.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

@@ -1,0 +1,6 @@
+Django==1.4
+distribute==0.6.19
+-e git+https://github.com/django-nonrel/mongodb-engine@d7d88e3cc8438f544a8f88280831149825d56764#egg=django_mongodb_engine-dev
+djangotoolbox==0.9.2
+pymongo==2.1.1
+wsgiref==0.1.2
