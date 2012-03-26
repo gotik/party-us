@@ -1,11 +1,12 @@
+from django.conf import settings
 from django.conf.urls.defaults import patterns, include, url
 from django.contrib import admin
 
 admin.autodiscover()
 
-urlpatterns = patterns('party_us.back',
+urlpatterns = patterns('',
 
-    url(r'^$', include('home.urls')),
+    url(r'^$', include('party_us.back.home.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
