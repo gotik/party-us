@@ -12,7 +12,7 @@ from django.http import HttpResponse, Http404
 def register_user(request):
     data = {}
     if request.user.is_authenticated():
-        raise Http404
+        data['msg'] = 'USER_REGISTER_ERR_USER_LOGGED'
     elif request.POST and request.is_ajax():
         username = password = email = ''
         username = request.POST['username']
