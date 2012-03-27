@@ -52,13 +52,14 @@
 			            <div class="row">
 			                <div class="login-form">
 			                    <h2>Login</h2>
-			                    <form action="">
+			                    <form action="/login/" method="post">
+			                    	{% csrf_token %}
 			                        <fieldset>
 			                            <div class="clearfix">
-			                                <input type="text" placeholder="Username">
+			                                <input type="text" placeholder="Username" name="username">
 			                            </div>
 			                            <div class="clearfix">
-			                                <input type="password" placeholder="Password">
+			                                <input type="password" placeholder="Password" name="password">
 			                            </div>
 			                            <button class="btn btn-primary" type="submit">Sign in</button>
 			                        </fieldset>
@@ -113,3 +114,17 @@
 
 	 </div><!--/.fluid-container-->
 {% endblock content %}
+{% block specific_javascript %}
+<script>
+	$.ajax({
+		type: 'POST',
+		url: '/login/',
+		data: 'username=juan&password=serverkaos',
+		success: function(data) {
+			console.log(data);
+		}
+	}).done(function() { 
+		$(this).addClass("done");
+	});
+</script>
+{% endblock specific_javascript %}
