@@ -129,11 +129,11 @@ INSTALLED_APPS = (
     'south',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'django.contrib.auth.decorators',
 
     #Apps
     'back.home',
     'back.player',
-    'back.users',
 )
 
 # A sample logging configuration. The only tangible logging
