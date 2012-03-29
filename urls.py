@@ -6,11 +6,11 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
 
-    url(r'^$', include('party_us.back.home.urls')),
+    url(r'^$', include('home.urls')),
 
-    url(r'^login/$', 'party_us.back.users.views.login_user'),
-    url(r'^logout/$', 'party_us.back.users.views.logout_user'),
-    url(r'^register/$', 'party_us.back.users.views.register_user'),
+    url(r'^login/$', 'users.views.login_user'),
+    url(r'^logout/$', 'users.views.logout_user'),
+    url(r'^register/$', 'users.views.register_user'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

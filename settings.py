@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # Django settings for party_us project.
 import os
+import sys
 
 import django.conf.global_settings as DEFAULT_SETTINGS
 
@@ -89,6 +90,9 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
+
+PROJECT_ROOT = os.path.dirname(__file__)
+sys.path.insert(0, os.path.join(PROJECT_ROOT, 'back'))
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'x_m^w_vbw13#7h@!qer1cd^uvvnedqgb6@k&0cq8+*m-y3hb+-'
