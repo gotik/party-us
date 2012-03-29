@@ -10,6 +10,9 @@ local_path = lambda path: os.sep.join(os.path.abspath(__file__).split(os.sep)[:-
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+APPS_FOLDER = 'apps'
+PUBLIC_FOLDER = 'public'
+
 ADMINS = (
     ('Juan Pablo', 'juan@kamikazepanda.com'),
     ('Jose', 'votaguz@gmail.com'),
@@ -80,7 +83,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    local_path('front/static'),
+    local_path(PUBLIC_FOLDER+'/static'),
 )
 
 # List of finder classes that know how to find static files in
@@ -92,7 +95,7 @@ STATICFILES_FINDERS = (
 )
 
 PROJECT_ROOT = os.path.dirname(__file__)
-sys.path.insert(0, os.path.join(PROJECT_ROOT, 'back'))
+sys.path.insert(0, os.path.join(PROJECT_ROOT, APPS_FOLDER))
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'x_m^w_vbw13#7h@!qer1cd^uvvnedqgb6@k&0cq8+*m-y3hb+-'
@@ -118,7 +121,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    local_path('front/templates'),
+    local_path(PUBLIC_FOLDER+'/templates'),
 )
 
 INSTALLED_APPS = (
@@ -136,8 +139,6 @@ INSTALLED_APPS = (
     'django.contrib.auth.decorators',
 
     #Apps
-    'back.home',
-    'back.player',
 )
 
 # A sample logging configuration. The only tangible logging
