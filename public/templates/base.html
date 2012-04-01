@@ -82,7 +82,7 @@
 				});
 		});
 
-		$('#btn-login').on('click', function  () {
+		$('#btn-login').on('click', function  (event) {
 			event.preventDefault();
 			$.post('/login/', {
 				csrfmiddlewaretoken: '{{ csrf_token }}',
@@ -102,7 +102,7 @@
 		});
 
 		$('#icon-off').on('click', function  () {
-			event.preventDefault();
+			//event.preventDefault();
 			$.post('/logout/', {
 				csrfmiddlewaretoken: '{{ csrf_token }}'
 			},
