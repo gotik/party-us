@@ -17,34 +17,35 @@
 
 	<body>
 		<div class="navbar navbar-fixed-top">
-				<div class="navbar-inner">
-						<div class="container-fluid">
-						 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-						 </a>
-						 <a class="brand" href="#">party us</a>
-						 <div class="nav-collapse">
-								<!--<i class="icon-list icon-white"></i>
-								<ul class="nav">
-										<li class="active"><a href="#">Home</a></li>
-										<li><a href="#about">About</a></li>
-										<li><a href="#contact">Contact</a></li>
-								</ul>
-								<div class="navbar-text pull-right">
-										<div style="display: none">
-										 <input id="form-login-user" type="text" placeholder="Username" name="username">
-											<input id="form-login-pass" type="password" placeholder="Password" name="password">
-											<button id="btn-login" class="btn btn-primary" type="submit" onclick="return false;">Login</button>
-									</div>
-									<i class="icon-user icon-white"></i>
-										Logged in as <a href="#">username</a> -->
-								</div>
-						 </div><!--/.nav-collapse -->
-						</div>
-				</div>
-		 </div>
+			<div class="navbar-inner">
+				<div class="container-fluid">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="#">party us</a>
+					<div class="nav-collapse">
+						<ul class="nav">
+							<!--
+							<li class="active"><a href="#">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#contact">Contact</a></li>
+							-->
+						</ul>
+						<div class="navbar-text pull-right">
+							<div style="display: none">
+								<input id="form-login-user" type="text" placeholder="Username" name="username">
+								<input id="form-login-pass" type="password" placeholder="Password" name="password">
+								<button id="btn-login" class="btn btn-primary" type="submit" onclick="return false;">Login</button>
+							</div>
+							<i class="icon-user"></i>
+									<!--	Logged in as <a href="#">username</a> -->
+							</div>
+					</div>
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
 		{% block content %}
 		{% endblock content %}
 

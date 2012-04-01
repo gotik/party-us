@@ -57,6 +57,7 @@
 // Brand, links, text, and buttons
 .navbar
   color: navbarText
+  box-shadow: 0 1px 10px -3px navbarShadowColor
   // Hover and active states
   .brand:hover
     text-decoration: none
@@ -65,12 +66,12 @@
   .brand
     float: left
     display: block
-    padding: 8px 20px 12px
+    padding: 8px 20px 8px
     margin-left: -20px // negative indent to left-align the text down the page
     font-size: 20px
     font-weight: 200
     line-height: 1
-    color: white
+    color: navbarBrandColor
 
   // Plain text in topbar
   .navbar-text
