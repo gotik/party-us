@@ -2872,7 +2872,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .brand {
   float: left;
   display: block;
-  padding: 8px 20px 8px;
+  padding: 5px 20px;
   margin-left: -20px;
   font-size: 20px;
   font-weight: 200;
@@ -3262,7 +3262,7 @@ input[type="submit"].btn.btn-mini {
   z-index: 2060;
 }
 .modal-open .tooltip {
-  z-index: 2070;
+  z-index: 2110;
 }
 .modal-backdrop {
   position: fixed;
@@ -3362,7 +3362,7 @@ input[type="submit"].btn.btn-mini {
 }
 .tooltip {
   position: absolute;
-  z-index: 1020;
+  z-index: 1060;
   display: block;
   visibility: visible;
   padding: 5px;
@@ -4045,5 +4045,22 @@ body {
 }
 .navbar .brand {
   font-family: 'ComicZineOTRegular';
-  font-size: 24px;
+  font-size: 25px;
+}
+.navbar-inner span {
+  display: block;
+  margin-top: 4px;
+}
+.navbar-inner i {
+  cursor: pointer;
+  margin-top: 8px;
+}
+.navbar-inner input {
+  margin: 0;
+}
+.navbar-inner .login-nav {
+  margin-top: 3px;
+}
+.navbar-inner #form-login li {
+  margin-left: 10px;
 }

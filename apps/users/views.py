@@ -43,6 +43,7 @@ def login_user(request):
         if user is not None:
             if user.is_active:
                 login(request, user)
+                data['user'] = username
                 data['msg'] = 'USER_LOGIN_OK'
             else:
                 data['msg'] = 'USER_LOGIN_ERR_NOT_ACTIVE'

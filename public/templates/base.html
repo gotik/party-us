@@ -26,22 +26,21 @@
 					</a>
 					<a class="brand" href="#">party us</a>
 					<div class="nav-collapse">
-						<ul class="nav">
-							<!--
-							<li class="active"><a href="#">Home</a></li>
-							<li><a href="#about">About</a></li>
-							<li><a href="#contact">Contact</a></li>
-							-->
-						</ul>
-						<div class="navbar-text pull-right">
-							<div style="display: none">
-								<input id="form-login-user" type="text" placeholder="Username" name="username">
-								<input id="form-login-pass" type="password" placeholder="Password" name="password">
-								<button id="btn-login" class="btn btn-primary" type="submit" onclick="return false;">Login</button>
-							</div>
-							<i class="icon-user"></i>
-									<!--	Logged in as <a href="#">username</a> -->
-							</div>
+						<div class="pull-right">
+							<ul class="nav login-nav">
+								<li><i id="icon-login" class="icon-user" rel="tooltip" data-original-title="sign in"></i></li>
+								<li id="form-login" style="display: none;">
+									<ul class="nav">
+										<li><input id="form-login-user" type="text" placeholder="Username" name="username"></li>
+										<li><input id="form-login-pass" type="password" placeholder="Password" name="password"></li>
+										<li><button id="btn-login" class="btn btn-primary">Login</button></li>
+									</ul>
+								</li>
+								<li id="in-login" style="display: none;">
+									<span>welcome <a href="#"></a></span>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div><!--/.nav-collapse -->
 			</div>
@@ -50,7 +49,38 @@
 		{% endblock content %}
 
 	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="{{ STATIC_URL }}js/lib/jquery-ui.min.js"></script>
 	<script src="{{ STATIC_URL }}js/bootstrap.js"></script>
+	<script src="{{ STATIC_URL }}js/bootstrap-modal.js"></script>
+	<script>
+		$('#icon-login').on('click', function () {
+			$('#form-login').toggle("slide",{direction: 'right'});
+		}).tooltip({
+			placement: 'bottom',
+			delay: {
+				hide: 150
+			}
+		});
+
+		$('#btn-login').on('click', function  () {
+			event.preventDefault();
+			$.post('/login/', {
+				csrfmiddlewaretoken: '{{ csrf_token }}',
+				username: document.getElementById('form-login-user').value,
+				password: document.getElementById('form-login-pass').value
+			},
+			function(data) {
+				console.log(data);
+				if(data['msg']=='USER_LOGIN_OK')
+					$('#form-login').hide("slide",{direction: 'right'}, null, function() {
+						$('#icon-login').remove();
+						$('#form-login').remove();
+						$('#in-login a').text(data['user']);
+						$('#in-login').show("slide",{direction: 'right'});
+					});
+			});
+		});
+	</script>
 	{% block specific_javascript %}
 	{% endblock specific_javascript %}
 	</body>
