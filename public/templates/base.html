@@ -91,13 +91,22 @@
 			},
 			function(data) {
 				//console.log(data);
-				if(data['msg']=='USER_LOGIN_OK')
+				if(data['msg']=='USER_LOGIN_OK') {
 					$('#form-login').hide("slide",{direction: 'right'}, null, function() {
 						$('#icon-login').remove();
 						$('#form-login').remove();
 						$('#in-login a').text(data['user']);
 						$('#in-login').show("slide",{direction: 'right'});
 					});
+				} else {
+					for(var i=0;i<4;i++){
+						$('#form-login').animate({
+							"left":'+=10'
+						},40).animate({
+							"left":'-=10'
+						},60);
+					}
+				}
 			});
 		});
 

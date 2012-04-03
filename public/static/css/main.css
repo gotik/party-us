@@ -1982,7 +1982,7 @@ table .span24 {
   text-align: center;
   text-shadow: 0 1px 1px rgba(255,255,255,0.75);
   vertical-align: middle;
-  background-color: #f5f5f5;
+  background-color: mix(#fff, #e6e6e6, 60%);
   background-image: -moz-linear-gradient(top, #fff, #e6e6e6);
   background-image: -ms-linear-gradient(top, #fff, #e6e6e6);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#e6e6e6));
@@ -2104,7 +2104,7 @@ table .span24 {
   color: rgba(255,255,255,0.75);
 }
 .btn-primary {
-  background-color: #0073cc;
+  background-color: mix(#08c, #05c, 60%);
   background-image: -moz-linear-gradient(top, #08c, #05c);
   background-image: -ms-linear-gradient(top, #08c, #05c);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#08c), to(#05c));
@@ -2129,7 +2129,7 @@ table .span24 {
   background-color: #004cb8 \9;
 }
 .btn-warning {
-  background-color: #f99d1c;
+  background-color: mix(#faa42b, #f89406, 60%);
   background-image: -moz-linear-gradient(top, #faa42b, #f89406);
   background-image: -ms-linear-gradient(top, #faa42b, #f89406);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#faa42b), to(#f89406));
@@ -2154,7 +2154,7 @@ table .span24 {
   background-color: #df8505 \9;
 }
 .btn-danger {
-  background-color: #da4e49;
+  background-color: mix(#ee5f5b, #bd362f, 60%);
   background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
   background-image: -ms-linear-gradient(top, #ee5f5b, #bd362f);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
@@ -2179,7 +2179,7 @@ table .span24 {
   background-color: #aa312a \9;
 }
 .btn-success {
-  background-color: #5bb65b;
+  background-color: mix(#62c462, #51a351, 60%);
   background-image: -moz-linear-gradient(top, #62c462, #51a351);
   background-image: -ms-linear-gradient(top, #62c462, #51a351);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351));
@@ -2204,7 +2204,7 @@ table .span24 {
   background-color: #499349 \9;
 }
 .btn-info {
-  background-color: #49afcd;
+  background-color: mix(#5bc0de, #2f96b4, 60%);
   background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
   background-image: -ms-linear-gradient(top, #5bc0de, #2f96b4);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#2f96b4));
@@ -2229,7 +2229,7 @@ table .span24 {
   background-color: #2a87a2 \9;
 }
 .btn-inverse {
-  background-color: #404040;
+  background-color: mix(#555, #222, 60%);
   background-image: -moz-linear-gradient(top, #555, #222);
   background-image: -ms-linear-gradient(top, #555, #222);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#555), to(#222));
@@ -2790,7 +2790,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-inner {
   padding-left: 20px;
   padding-right: 20px;
-  background-color: #f8f8f8;
+  background-color: mix(#fff, #eee, 60%);
   background-image: -moz-linear-gradient(top, #fff, #eee);
   background-image: -ms-linear-gradient(top, #fff, #eee);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#eee));
@@ -2815,7 +2815,7 @@ input[type="submit"].btn.btn-mini {
   padding: 7px 10px;
   margin-left: 5px;
   margin-right: 5px;
-  background-color: #f8f8f8;
+  background-color: mix(#fff, #eee, 60%);
   background-image: -moz-linear-gradient(top, #fff, #eee);
   background-image: -ms-linear-gradient(top, #fff, #eee);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#eee));
@@ -3117,7 +3117,7 @@ input[type="submit"].btn.btn-mini {
   padding: 7px 14px;
   margin: 0 0 18px;
   list-style: none;
-  background-color: #fbfbfb;
+  background-color: mix(#fff, #f5f5f5, 60%);
   background-image: -moz-linear-gradient(top, #fff, #f5f5f5);
   background-image: -ms-linear-gradient(top, #fff, #f5f5f5);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#f5f5f5));
@@ -3697,7 +3697,7 @@ a.thumbnail:hover {
   overflow: hidden;
   height: 18px;
   margin-bottom: 18px;
-  background-color: #f6f6f6;
+  background-color: mix(#f5f5f5, #f9f9f9, 60%);
   background-image: -moz-linear-gradient(top, #f5f5f5, #f9f9f9);
   background-image: -ms-linear-gradient(top, #f5f5f5, #f9f9f9);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#f9f9f9));
@@ -3720,7 +3720,7 @@ a.thumbnail:hover {
   font-size: 12px;
   text-align: center;
   text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
-  background-color: #0d90d1;
+  background-color: mix(#149bdf, #0480be, 60%);
   background-image: -moz-linear-gradient(top, #149bdf, #0480be);
   background-image: -ms-linear-gradient(top, #149bdf, #0480be);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#149bdf), to(#0480be));
@@ -3761,7 +3761,7 @@ a.thumbnail:hover {
   animation: progress-bar-stripes 2s linear infinite;
 }
 .progress-danger .bar {
-  background-color: #dd514b;
+  background-color: mix(#ee5f5b, #c43c35, 60%);
   background-image: -moz-linear-gradient(top, #ee5f5b, #c43c35);
   background-image: -ms-linear-gradient(top, #ee5f5b, #c43c35);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#c43c35));
@@ -3781,7 +3781,7 @@ a.thumbnail:hover {
   background-image: linear-gradient(-45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
 }
 .progress-success .bar {
-  background-color: #5db95d;
+  background-color: mix(#62c462, #57a957, 60%);
   background-image: -moz-linear-gradient(top, #62c462, #57a957);
   background-image: -ms-linear-gradient(top, #62c462, #57a957);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#57a957));
@@ -3801,7 +3801,7 @@ a.thumbnail:hover {
   background-image: linear-gradient(-45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
 }
 .progress-info .bar {
-  background-color: #4bb1cf;
+  background-color: mix(#5bc0de, #339bb9, 60%);
   background-image: -moz-linear-gradient(top, #5bc0de, #339bb9);
   background-image: -ms-linear-gradient(top, #5bc0de, #339bb9);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#339bb9));
@@ -3821,7 +3821,7 @@ a.thumbnail:hover {
   background-image: linear-gradient(-45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
 }
 .progress-warning .bar {
-  background-color: #f99d1c;
+  background-color: mix(#faa42b, #f89406, 60%);
   background-image: -moz-linear-gradient(top, #faa42b, #f89406);
   background-image: -ms-linear-gradient(top, #faa42b, #f89406);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#faa42b), to(#f89406));
@@ -4039,6 +4039,9 @@ a.thumbnail:hover {
 body {
   padding-top: 60px;
   padding-bottom: 40px;
+}
+#form-login {
+  position: relative;
 }
 .sidebar-nav {
   padding: 9px 0;
